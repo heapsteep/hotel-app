@@ -1,0 +1,20 @@
+<form [formGroup]="formGroup_1" (submit)="onSubmit()">    
+    <div>
+        <label>Guest Name:</label>
+        <input type="text" formControlName="guestName">
+    </div>
+    <div>
+        <label>e-Mail:</label>
+        <input type="email" formControlName="guestMail">
+    </div>
+    <div>
+        <label>Check-In Date:</label>
+        <input type="date" formControlName="checkInDate">
+    </div>
+    <div>
+        <label>Check-Out Date:</label>
+        <input type="date" formControlName="checkOutDate">
+    </div>
+
+    <button type="submit" [disabled]="formGroup_1.invalid">Submit</button>
+</form>

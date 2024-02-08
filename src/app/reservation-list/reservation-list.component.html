@@ -1,0 +1,11 @@
+<h2>Reservation-List</h2>
+<ul>
+    <li *ngFor="let reservation of reservations">
+        Guest Name: {{reservation.guestName}} <br>
+        Guest eMail: {{reservation.guestMail}} <br>
+        Guest Check In: {{reservation.checkInDate}} <br>
+        Guest Check Out: {{reservation.checkOutDate}} <br>
+        <button (click)="deleteReservation(reservation.id)">Delete</button>
+        <button [routerLink]="['/edit',reservation.id]">Edit</button>
+    </li>
+</ul>
